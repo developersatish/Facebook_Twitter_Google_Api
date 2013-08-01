@@ -1,0 +1,53 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="WebLogin.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="/Scripts/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="/Scripts/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" />
+    <link href="/Scripts/bootstrap/css/docs.css" rel="stylesheet" />
+    <link href="/Scripts/bootstrap/css/prettify.css" rel="stylesheet" />
+    <script src="/Scripts/jquery-2.0.0.min.js"></script>
+    <script src="/Scripts/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a href="<%:GetRouteUrl("Default",null) %>" class="brand">developersatish</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li>
+                            <a href="<%:GetRouteUrl("TwitterAccount",null) %>">Twitter Login</a>
+                        </li>
+                        <li>
+                            <a href="<%:GetRouteUrl("Default",null) %>">Facebook Login javascript Api</a>
+                        </li>
+                        <li>
+                            <a href="<%:GetRouteUrl("GooglePlusPage",null) %>">Google + by javascript</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form id="form1" runat="server">
+
+        <div class="container" style="min-height: 100px;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+    </form>
+    <footer class="footer">
+    </footer>
+    <asp:ContentPlaceHolder ID="ScriptContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
